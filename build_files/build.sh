@@ -10,7 +10,12 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+
+## System apps
+dnf -y install flatpak-builder # libvirt virt-manager qemu-kvm wlr-randr iotop sysstat lxqt-openssh-askpass lxpolkit parallel just seahorse
+
+# User apps
+dnf -y install nautilus gnome-terminal gnome-system-monitor gnome-calculator loupe
 
 # Use a COPR Example:
 #
