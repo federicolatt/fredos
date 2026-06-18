@@ -16,7 +16,7 @@ sed -i '/^\[main\]/a max_parallel_downloads=10' /etc/dnf/dnf.conf
 dnf -y install flatpak-builder # libvirt virt-manager qemu-kvm wlr-randr iotop sysstat lxqt-openssh-askpass lxpolkit parallel just seahorse
 
 ### User apps
-dnf -y install nautilus gnome-terminal gnome-system-monitor gnome-calculator loupe kitty # bitwarden-cli lxpolkit
+dnf -y install nautilus gnome-terminal gnome-system-monitor gnome-calculator loupe kitty lxpolkit # bitwarden-cli 
 # DEV packages
 # cargo evtest git input-remapper libevdev-devel libinput-utils python3-devel
 
@@ -54,6 +54,7 @@ dnf -y install niri bibata-cursor-theme
 sudo curl --output-dir "/etc/yum.repos.d/" \
   --remote-name "https://copr.fedorainfracloud.org/coprs/avengemedia/dms/repo/fedora-$(rpm -E %fedora)/avengemedia-dms-fedora-$(rpm -E %fedora).repo"
 #
+dnf -y install greetd dms
 # Install greetd login manager with dank configuration (still needs some work)
 mkdir -p /etc/greetd/
 cat > /etc/greetd/config.toml << EOF
