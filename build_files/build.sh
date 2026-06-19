@@ -54,7 +54,7 @@ dnf -y install niri bibata-cursor-theme
 sudo curl --output-dir "/etc/yum.repos.d/" \
   --remote-name "https://copr.fedorainfracloud.org/coprs/avengemedia/dms/repo/fedora-$(rpm -E %fedora)/avengemedia-dms-fedora-$(rpm -E %fedora).repo"
 #
-dnf -y install greetd dms
+dnf -y install dms greetd 
 # Install greetd login manager with dank configuration (still needs some work)
 mkdir -p /etc/greetd/
 cat > /etc/greetd/config.toml << EOF

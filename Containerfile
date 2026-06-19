@@ -3,9 +3,9 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-#FROM ghcr.io/rakuos/rakuos-base:latest
+FROM ghcr.io/rakuos/rakuos-base:latest
 #FROM ghcr.io/rakuos/rakuos-base-nvidia:latest
-FROM ghcr.io/rakuos/rakuos-gnome:latest
+#FROM ghcr.io/rakuos/rakuos-gnome:latest
 #FROM ghcr.io/rakuos/rakuos-gnome-nvidia:latest
 RUN sed -i 's/^ID=.*/ID=fedora/' /etc/os-release
 
