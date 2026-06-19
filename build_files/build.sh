@@ -13,10 +13,10 @@ sed -i '/^\[main\]/a max_parallel_downloads=10' /etc/dnf/dnf.conf
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 ## System apps
-dnf -y install flatpak-builder # libvirt virt-manager qemu-kvm wlr-randr iotop sysstat lxqt-openssh-askpass lxpolkit parallel just seahorse
+dnf -y install flatpak-builder lxpolkit seahorse # libvirt virt-manager qemu-kvm wlr-randr iotop sysstat lxqt-openssh-askpass parallel just 
 
 ### User apps
-dnf -y install nautilus gnome-terminal gnome-system-monitor gnome-calculator loupe kitty lxpolkit # bitwarden-cli 
+dnf -y install nautilus gnome-terminal gnome-system-monitor gnome-calculator loupe kitty # bitwarden-cli 
 # DEV packages
 # cargo evtest git input-remapper libevdev-devel libinput-utils python3-devel
 
