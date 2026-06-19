@@ -10,7 +10,7 @@ FROM ghcr.io/rakuos/rakuos-base:latest
 RUN sed -i 's/^ID=.*/ID=fedora/' /etc/os-release
 
 # File system BTRFS per la ISO
-LABEL containers.bootc.rootfs.type="btrfs"
+#LABEL containers.bootc.rootfs.type="btrfs"
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
