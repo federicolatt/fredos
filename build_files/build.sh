@@ -34,7 +34,7 @@ dnf -y install nautilus gnome-terminal gnome-system-monitor gnome-calculator lou
 #gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty blackbox-terminal
 
 # install gnome-sushi (image viewer) and nautilus-admin
-dnf -y install nautilus-python python3-nautilus python3-gobject sushi nautilus-admin
+dnf -y install nautilus-python sushi # nautilus-admin
 # nautilus-copy-path
 mkdir -p /usr/share/nautilus-python/extensions/
 curl -L -o /usr/share/nautilus-python/extensions/nautilus-copy-path.py \
