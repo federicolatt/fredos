@@ -33,13 +33,12 @@ dnf -y install nautilus gnome-terminal gnome-system-monitor gnome-calculator lou
 #glib-compile-schemas /usr/share/glib-2.0/schemas
 #gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty blackbox-terminal
 
-# install gnome-sushi (image viewer)
-
-
-# nautilus-admin
-
-
+# install gnome-sushi (image viewer) and nautilus-admin
+dnf -y install nautilus-python python3-nautilus python3-gobject sushi nautilus-admin
 # nautilus-copy-path
+mkdir -p /usr/share/nautilus-python/extensions/
+curl -L -o /usr/share/nautilus-python/extensions/nautilus-copy-path.py \
+  https://raw.githubusercontent.com/chr314/nautilus-copy-path/master/nautilus-copy-path.py
 
 # Install Niri 
 dnf -y install niri bibata-cursor-theme
