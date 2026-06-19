@@ -44,6 +44,7 @@ curl -L -o /usr/share/nautilus-python/extensions/nautilus-copy-path.py \
 dnf -y install niri bibata-cursor-theme
 
 # Install Noctalia shell
+rm -f /etc/yum.repos.d/terra*.repo # removes terra repo that gives problems during  the iso creation
 #curl -fsSL https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo -o /etc/yum.repos.d/terra.repo
 #dnf -y install terra-release
 #dnf -y install noctalia-shell 
