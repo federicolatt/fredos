@@ -9,6 +9,9 @@ FROM ghcr.io/rakuos/rakuos-base:latest
 #FROM ghcr.io/rakuos/rakuos-gnome-nvidia:latest
 RUN sed -i 's/^ID=.*/ID=fedora/' /etc/os-release
 
+# File system BTRFS per la ISO
+LABEL containers.bootc.rootfs.type="btrfs"
+
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
 # FROM ghcr.io/ublue-os/bluefin-nvidia:stable
